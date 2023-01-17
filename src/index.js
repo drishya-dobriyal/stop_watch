@@ -28,7 +28,7 @@ function getTime(time) {
 
 /* Start Timer */
 function startTimer() {
-  console.log("Start Timer...");
+  document.getElementById("start-btn").disabled = true;
   timerInterval = setInterval(function () {
     currentTime++;
     const { hours, minutes, seconds } = getTime(currentTime);
@@ -47,6 +47,7 @@ function startTimer() {
 function stopTimer() {
   console.log("Stop Timer...");
   clearInterval(timerInterval);
+  document.getElementById("start-btn").disabled = false;
 }
 /* Reset Timer */
 function resetTimer() {
@@ -56,6 +57,7 @@ function resetTimer() {
   minutesEle.innerText = "00";
   secondsEle.innerText = "00";
   currentTime = 0;
+  document.getElementById("start-btn").disabled = false;
 }
 document.getElementById("start-btn").addEventListener("click", startTimer);
 document.getElementById("stop-btn").addEventListener("click", stopTimer);
