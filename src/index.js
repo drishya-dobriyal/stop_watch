@@ -1,3 +1,4 @@
+/* Displayer Elements */
 const hoursEle = document.getElementById("hours");
 const minutesEle = document.getElementById("minutes");
 const secondsEle = document.getElementById("seconds");
@@ -60,6 +61,7 @@ function resetTimer() {
   currentTime = 0;
   document.getElementById("start-btn").disabled = false;
 }
+/* Add eventListter */
 document.getElementById("start-btn").addEventListener("click", startTimer);
 document.getElementById("stop-btn").addEventListener("click", stopTimer);
 document.getElementById("reset-btn").addEventListener("click", resetTimer);
